@@ -29,6 +29,7 @@
         .result {
             margin-top: 20px;
             font-weight: bold;
+            text-align: left;
         }
 
         .score {
@@ -39,8 +40,14 @@
     </style>
 </head>
 <body>
-    <input type="file" id="fileInput">
-    <button onclick="loadFile()">讀取檔案</button>
+    <div>
+        <input type="file" id="fileInput">
+        <button onclick="loadFile()">讀取檔案</button>
+    </div>
+    <div>
+        <input type="file" id="fileAnsInput">
+        <button onclick="loadAnsFile()">讀取解答</button>
+    </div>
     <p class="result" id="result"></p>
     <p class="score" id="score">分數: 0</p>
 
@@ -53,7 +60,8 @@
     <script>
 
         let questions = [];
-        let anser = [];
+        let userAnser = [];
+        let testAnser = [];
         let currentQuestionIndex = 0;
         let score = 0;
 
@@ -71,6 +79,26 @@
                 questions = JSON.parse(text);
 
                 loadQuestion();
+            };
+            reader.readAsText(file);
+
+
+        }
+
+        function loadAnsFile() {
+            const fileInput = document.getElementById("fileAnsInput");
+            const file = fileInput.files[0];
+            if (!file) {
+                alert("請選擇一個檔案");
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function (event) {
+                const text = event.target.result;
+                testAnser = JSON.parse(text);
+
+                checkAnswerResult();
             };
             reader.readAsText(file);
 
@@ -109,7 +137,7 @@
         function checkAnswer() {
             if (questions.length === 0) return;
 
-            const correctAnswer = questions[currentQuestionIndex].answer;
+            //const correctAnswer = questions[currentQuestionIndex].answer;
             const selected = document.querySelector('input[name="answer"]:checked');
             if (!selected) {
                 document.getElementById("result").textContent = "請選擇一個答案！";
@@ -132,21 +160,52 @@
             currentQuestionIndex++;
             loadQuestion()
         }
+
+        function checkAnswerResult() {
+            score = 0;
+            userAnser = GetUserAnser();
+            document.getElementById("result").innerHTML = "錯誤題目:<br />";
+            userAnser.forEach(anser => {
+                let testNum = anser.key;
+
+                let realAns = testAnser.filter(x => x.key == testNum)[0];
+                const quiz = questions.filter(x => x.question_number == testNum)[0];
+                
+                if (realAns.value == anser.value) {
+                    score += (100 / (testAnser.length));
+                } else {
+                    document.getElementById("result").innerHTML += "<div>";
+
+
+
+                    document.getElementById("result").innerHTML += `${quiz.question_number}.${quiz.question}<br />`;
+                    let realQuest = quiz.options.filter(x => x.key == realAns.value)[0];
+
+                    document.getElementById("result").innerHTML += `正確答案:${realAns.value} ${realQuest.value}<br />`;
+                    let youQuest = quiz.options.filter(x => x.key == anser.value)[0];
+
+                    document.getElementById("result").innerHTML += `你的答案:${anser.value} ${youQuest.value}<br />`;
+                    document.getElementById("result").innerHTML = "<br />";
+                    document.getElementById("result").innerHTML += "</div>";
+                }
+            });
+            updateScore();
+        }
+
         function GetUserAnser() {
-            const UserAnser = (localStorage.getItem('USER_ANSER')) ? JSON.parse(localStorage.getItem('USER_ANSER')) : [];
-            return UserAnser
+            return (localStorage.getItem('USER_ANSER')) ? JSON.parse(localStorage.getItem('USER_ANSER')) : [];
         }
         function SetUserAnser(key, value) {
-            let UserAnser = this.GetUserAnser();
+            userAnser = GetUserAnser();
             //重複的要刪除列到最上面
-            UserAnser = UserAnser.filter(x => x.key != (key + 1));
-            UserAnser.push({ key: key + 1, value: value });
-            localStorage.setItem("USER_ANSER", JSON.stringify(UserAnser));
+            userAnser = userAnser.filter(x => x.key != (key + 1));
+            userAnser.push({ key: key + 1, value: value });
+            localStorage.setItem("USER_ANSER", JSON.stringify(userAnser));
         }
         function restoreSelection() {
-            anser = GetUserAnser();
+            userAnser = GetUserAnser();
 
-            const savedAnswer = anser.filter(x => x.key == (currentQuestionIndex + 1))[0];
+            const savedAnswer = userAnser.filter(x => x.key == (currentQuestionIndex + 1))[0];
             console.log(savedAnswer);
             if (savedAnswer) {
                 const radioButtons = document.querySelectorAll('input[name="answer"]');
