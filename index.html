@@ -37,6 +37,14 @@
             font-size: 18px;
             font-weight: bold;
         }
+
+        .green {
+            color: green;
+        }
+
+        .red {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -170,24 +178,35 @@
 
                 let realAns = testAnser.filter(x => x.key == testNum)[0];
                 const quiz = questions.filter(x => x.question_number == testNum)[0];
-                
+
                 if (realAns.value == anser.value) {
                     score += (100 / (testAnser.length));
-                } else {
-                    document.getElementById("result").innerHTML += "<div>";
-
-
-
-                    document.getElementById("result").innerHTML += `${quiz.question_number}.${quiz.question}<br />`;
-                    let realQuest = quiz.options.filter(x => x.key == realAns.value)[0];
-
-                    document.getElementById("result").innerHTML += `正確答案:${realAns.value} ${realQuest.value}<br />`;
-                    let youQuest = quiz.options.filter(x => x.key == anser.value)[0];
-
-                    document.getElementById("result").innerHTML += `你的答案:${anser.value} ${youQuest.value}<br />`;
-                    document.getElementById("result").innerHTML = "<br />";
-                    document.getElementById("result").innerHTML += "</div>";
                 }
+                let resultDiv = document.getElementById("result");
+                let title = document.createElement("div");
+                title.classList.add("quiz-result");
+                title.innerHTML = `<div> ${quiz.question_number}.${quiz.question} </div>`;
+
+
+                quiz.options.forEach(option => {
+                    let label = document.createElement("div");
+
+                    if (option.key == realAns.value) {
+                        label.innerHTML = `<div>O ${option.key}.${option.value} </div>`;
+                        label.classList.add("green");
+                    }
+                    else if (option.key == anser.value) {
+                        label.innerHTML = `<div>X ${option.key}.${option.value} </div>`;
+                        label.classList.add("red");
+                    } else {
+                        label.innerHTML = `<div>${option.key}.${option.value} </div>`;
+                    }
+                    title.appendChild(label);
+                });
+                resultDiv.appendChild(title);
+                resultDiv.appendChild(document.createElement("br"));
+
+
             });
             updateScore();
         }
