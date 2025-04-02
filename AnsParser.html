@@ -20,12 +20,15 @@
                 const lines = e.target.result.split('\n').map(line => line.trim()).filter(line => line);
                 let jsonData = [];
                 let currentKey = '';
+                let isParsingAnswers = false;
                 
-                lines.forEach((line, index) => {
+                lines.forEach((line) => {
                     if (isNaN(line) && !line.includes('或')) {
                         currentKey = line;
-                    } else {
-                        jsonData.push({ key: index, value: line });
+                        isParsingAnswers = currentKey.includes('標準答案');
+                    } else if (isParsingAnswers && currentKey.includes('標準答案')) {
+                        let values = line.split('或').map(v => v.trim()).map(Number);
+                        jsonData.push({ key: jsonData.length + 1, value: values });
                     }
                 });
                 
