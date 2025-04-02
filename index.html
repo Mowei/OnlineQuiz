@@ -5,30 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>線上測試</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        .quiz-container { max-width: 400px; margin: auto; }
-        .option { display: block; margin: 10px 0; }
-        .result { margin-top: 20px; font-weight: bold; }
-        .score { margin-top: 20px; font-size: 18px; font-weight: bold; }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        #question {
+            text-align: left;
+        }
+
+        .option {
+            display: block;
+            margin: 10px 0;
+            text-align: left;
+            /*text-wrap-mode: nowrap;*/
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .score {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-	<input type="file" id="fileInput">
-	<button onclick="loadFile()">讀取檔案</button>
+    <input type="file" id="fileInput">
+    <button onclick="loadFile()">讀取檔案</button>
+    <p class="result" id="result"></p>
+    <p class="score" id="score">分數: 0</p>
+
     <div class="quiz-container">
         <h2>測試題目：</h2>
         <p id="question"></p>
         <div id="options"></div>
-        <button onclick="checkAnswer()">提交答案</button>
-        <p class="result" id="result"></p>
-        <p class="score" id="score">分數: 0</p>
     </div>
+    <button onclick="checkAnswer()">提交答案</button>
     <script>
-		
+
         let questions = [];
+        let anser = [];
         let currentQuestionIndex = 0;
         let score = 0;
-		
+
         function loadFile() {
             const fileInput = document.getElementById("fileInput");
             const file = fileInput.files[0];
@@ -36,14 +64,15 @@
                 alert("請選擇一個檔案");
                 return;
             }
-            
+
             const reader = new FileReader();
-            reader.onload = function(event) {
+            reader.onload = function (event) {
                 const text = event.target.result;
-				questions = JSON.parse(text);
-				loadQuestion();
+                questions = JSON.parse(text);
+
+                loadQuestion();
             };
-			reader.readAsText(file);
+            reader.readAsText(file);
 
 
         }
@@ -66,44 +95,63 @@
             document.getElementById("question").textContent = (currentQuestionIndex + 1) + ". " + quiz.question;
             const optionsDiv = document.getElementById("options");
             optionsDiv.innerHTML = "";
-			for(let i=0 ;i<quiz.options.length;i++){
-			console.log(quiz.options[i]);
-            //quiz.options.forEach(option => {
+
+            quiz.options.forEach(option => {
                 const label = document.createElement("label");
                 label.classList.add("option");
-                label.innerHTML = `<input type="radio" name="answer" value="${quiz.options[i].key}"> ${quiz.options[i].key}.${quiz.options[i].value}`;
+                label.innerHTML = `<input type="radio" name="answer" value="${option.key}"> ${option.key}.${option.value}`;
                 optionsDiv.appendChild(label);
-				console.log(label);
-            //});
-			}
+            });
+
             restoreSelection();
         }
 
         function checkAnswer() {
             if (questions.length === 0) return;
+
             const correctAnswer = questions[currentQuestionIndex].answer;
             const selected = document.querySelector('input[name="answer"]:checked');
             if (!selected) {
                 document.getElementById("result").textContent = "請選擇一個答案！";
                 return;
             }
+            SetUserAnser(currentQuestionIndex, selected.value);
+
+            /*
             if (selected.value === correctAnswer) {
                 document.getElementById("result").textContent = "正確！";
                 score++;
-            } else {
+            }
+            else {
                 document.getElementById("result").textContent = "錯誤，請再試一次！";
             }
-            localStorage.setItem("selectedAnswer", selected.value);
+
             localStorage.setItem("score", score);
             updateScore();
+            */
+            currentQuestionIndex++;
+            loadQuestion()
         }
-
+        function GetUserAnser() {
+            const UserAnser = (localStorage.getItem('USER_ANSER')) ? JSON.parse(localStorage.getItem('USER_ANSER')) : [];
+            return UserAnser
+        }
+        function SetUserAnser(key, value) {
+            let UserAnser = this.GetUserAnser();
+            //重複的要刪除列到最上面
+            UserAnser = UserAnser.filter(x => x.key != (key + 1));
+            UserAnser.push({ key: key + 1, value: value });
+            localStorage.setItem("USER_ANSER", JSON.stringify(UserAnser));
+        }
         function restoreSelection() {
-            const savedAnswer = localStorage.getItem("selectedAnswer");
+            anser = GetUserAnser();
+
+            const savedAnswer = anser.filter(x => x.key == (currentQuestionIndex + 1))[0];
+            console.log(savedAnswer);
             if (savedAnswer) {
                 const radioButtons = document.querySelectorAll('input[name="answer"]');
                 radioButtons.forEach(radio => {
-                    if (radio.value === savedAnswer) {
+                    if (radio.value === savedAnswer.value) {
                         radio.checked = true;
                     }
                 });
