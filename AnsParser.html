@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>檔案解析成 JSON</title>
+</head>
+<body>
+    <h2>上傳檔案並解析成 JSON</h2>
+    <input type="file" id="fileInput">
+    <pre id="output"></pre>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const lines = e.target.result.split('\n').map(line => line.trim()).filter(line => line);
+                let jsonData = [];
+                let currentKey = '';
+                
+                lines.forEach((line, index) => {
+                    if (isNaN(line) && !line.includes('或')) {
+                        currentKey = line;
+                    } else {
+                        jsonData.push({ key: index, value: line });
+                    }
+                });
+                
+                document.getElementById('output').textContent = JSON.stringify(jsonData, null, 4);
+            };
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+</html>
