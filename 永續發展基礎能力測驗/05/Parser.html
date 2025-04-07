@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>題目解析器</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        textarea { width: 80%; height: 150px; }
+        pre { text-align: left; background: #f4f4f4; padding: 10px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h2>題目解析器</h2>
+    <input type="file" id="fileInput">
+    <br><br>
+    <button onclick="loadFile()">讀取並解析檔案</button>
+    <h3>解析結果 (JSON)：</h3>
+    <pre id="output"></pre>
+
+    <script>
+        function loadFile() {
+            const fileInput = document.getElementById("fileInput");
+            const file = fileInput.files[0];
+            if (!file) {
+                alert("請選擇一個檔案");
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const text = event.target.result;
+                parseQuestions(text);
+            };
+            reader.readAsText(file);
+        }
+
+        function parseQuestions(text) {
+            const pattern = /(\d+)\.(.+?)\s*\(([A-D1-4])\)(.+?)(?:\s*\((A)\)(.+?))?(?:\s*\((B)\)(.+?))?(?:\s*\((C)\)(.+?))?(?:\s*\((D)\)(.+?))\s/g;
+            let match;
+            let questions = [];
+			
+			text = text.replace(/\r\n/g, ' ');
+
+            while ((match = pattern.exec(text)) !== null) {
+                let questionNumber = match[1];
+                let questionText = match[2].trim();
+                let options = [];
+                console.log(match);
+                for (let i = 3; i <= 12; i += 2) {
+					
+                    if (match[i]) {
+						options.push({key:match[i],value:match[i + 1].trim()});
+                        //options[match[i]] = match[i + 1].trim();
+						
+                    }
+                }
+
+                questions.push({
+                    question_number: questionNumber,
+                    question: questionText,
+                    options: options
+                });
+            }
+
+            document.getElementById("output").textContent = JSON.stringify(questions, null, 4);
+        }
+    </script>
+</body>
+</html>
