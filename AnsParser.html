@@ -23,11 +23,11 @@
                 let isParsingAnswers = false;
                 
                 lines.forEach((line) => {
-                    if (isNaN(line) && !line.includes('或')) {
+                    if (isNaN(line) && !line.includes('或')&& !line.includes('A')&& !line.includes('B')&& !line.includes('C')&& !line.includes('D')) {
                         currentKey = line;
                         isParsingAnswers = currentKey.includes('標準答案');
                     } else if (isParsingAnswers && currentKey.includes('標準答案')) {
-                        let values = line.split('或').map(v => v.trim()).map(Number);
+                        let values = line.split('或').map(v => v.trim());
                         jsonData.push({ key: jsonData.length + 1, value: values });
                     }
                 });
