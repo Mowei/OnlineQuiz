@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>線上測驗（合併版）</title>
+  <title>線上測驗</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -44,186 +45,238 @@
     .red {
       color: red;
     }
+
+    .navigation {
+      margin: 20px;
+    }
+
+    #progressBar {
+      width: 100%;
+      background-color: #eee;
+    }
+
+    #progressBarFill {
+      width: 0%;
+      height: 20px;
+      background-color: #4caf50;
+    }
   </style>
 </head>
-  <body>
 
-    <h2>線上測驗（讀取 merged.json）</h2>
-  
-    <div>
-      <input type="file" id="fileInput">
-      <button onclick="loadMergedFile()">讀取 merged.json</button>
-    </div>
-  
-    <div id="controlPanel" style="margin: 20px; display:none;">
-      <button onclick="prevQuestion()">⬅ 上一題</button>
-      <span id="questionCounter">第 1 / 1 題</span>
-      <button onclick="nextQuestion()">➡ 下一題</button>
-      <input type="number" id="gotoIndex" min="1" style="width:60px;">
-      <button onclick="gotoQuestion()">跳至題號</button>
-    </div>
-  
+<body>
+  <div>
+    <input type="file" id="fileInput">
+    <button onclick="loadQuestionFile()">讀取檔案</button>
+  </div>
+  <p id="timer">倒數計時: 5400 秒</p>
+  <div class="navigation">
+    <button onclick="prevQuestion()">上一題</button>
+    <span id="questionIndex">第 1 題</span>
+    <input type="number" id="jumpInput" style="width: 50px;">
+    <button onclick="jumpToQuestion()">跳至</button>
+    <button onclick="nextQuestion()">下一題</button>
+  </div>
+  <div id="progressBar">
+    <div id="progressBarFill"></div>
+  </div>
+  <div>
     <p class="score" id="score" style="display: none;">分數: 0</p>
-    <p class="result" id="result"></p>
-  
-    <div id="quiz" class="quiz-container" style="display:none;">
-      <h3>測試題目：</h3>
-      <p id="question"></p>
-      <div id="options"></div>
-      <button onclick="evaluateResults()">批改分數</button>
-    </div>
-  
-    <script>
-      let questions = [];
-      let userAnser = [];
-      let currentQuestionIndex = 0;
-      let score = 0;
-  
-      function loadMergedFile() {
-        const fileInput = document.getElementById("fileInput");
-        const file = fileInput.files[0];
-        if (!file) {
-          alert("請選擇 merged.json 檔案");
-          return;
-        }
-  
-        const reader = new FileReader();
-        reader.onload = function (event) {
-          questions = JSON.parse(event.target.result);
-          currentQuestionIndex = 0;
-          //localStorage.removeItem("USER_ANSER");
-          document.getElementById("result").innerHTML = "";
-          document.getElementById("quiz").style.display = "block";
-          document.getElementById("controlPanel").style.display = "block";
-          loadQuestion();
-        };
-        reader.readAsText(file);
-      }
-  
-      function loadQuestion() {
-        if (currentQuestionIndex >= questions.length) {
-          evaluateResults();
-          return;
-        }
-  
-        const quiz = questions[currentQuestionIndex];
-        document.getElementById("question").textContent = (currentQuestionIndex + 1) + ". " + quiz.question;
-        const optionsDiv = document.getElementById("options");
-        optionsDiv.innerHTML = "";
-  
-        quiz.options.forEach(option => {
-          const label = document.createElement("label");
-          label.classList.add("option");
-          label.innerHTML = `<input type="radio" name="answer" value="${option.key}"> ${option.key}.${option.value}`;
-          optionsDiv.appendChild(label);
-        });
-  
-        updateQuestionCounter();
-        restoreSelection();
-      }
-  
-      function updateQuestionCounter() {
-        document.getElementById("questionCounter").textContent = `第 ${currentQuestionIndex + 1} / ${questions.length} 題`;
-      }
+    <button onclick="cleanQuiz()">重新作答</button>
+    <button onclick="showIncorrectOnly()">只看錯題</button>
+    <button onclick="evaluateResults()">批改分數</button>
+    <div class="result" id="result"></p>
+  </div>
 
-  
-      function prevQuestion() {
-        if (currentQuestionIndex > 0) {
-          currentQuestionIndex--;
-          loadQuestion();
-        }
-      }
-  
-      function nextQuestion() {
-        if (currentQuestionIndex < questions.length - 1) {
-          currentQuestionIndex++;
-          loadQuestion();
-        }
-      }
-  
-      function gotoQuestion() {
-        const input = document.getElementById("gotoIndex").value;
-        const index = parseInt(input) - 1;
-        if (index >= 0 && index < questions.length) {
-          currentQuestionIndex = index;
-          loadQuestion();
-        } else {
-          alert("輸入題號超出範圍！");
-        }
-      }
-  
-      function evaluateResults() {
-        userAnser = GetUserAnser();
-        score = 0;
-        document.getElementById("result").innerHTML = "錯誤題目:<br />";
-  
-        userAnser.forEach(userAns => {
-          const quiz = questions.find(q => parseInt(q.question_number) === userAns.key);
-          const correctAns = quiz.answer;
-  
-          const title = document.createElement("div");
-          title.classList.add("quiz-result");
-          title.innerHTML = `<div> ${quiz.question_number}. ${quiz.question} </div>`;
-  
-          quiz.options.forEach(option => {
-            const div = document.createElement("div");
-  
-            if (correctAns.includes(option.key)) {
-              div.innerHTML = `O ${option.key}. ${option.value}`;
-              div.classList.add("green");
-            } else if (option.key === userAns.value) {
-              div.innerHTML = `X ${option.key}. ${option.value}`;
-              div.classList.add("red");
-            } else {
-              div.innerHTML = `${option.key}. ${option.value}`;
-            }
-  
-            title.appendChild(div);
-          });
-  
-          document.getElementById("result").appendChild(title);
-          document.getElementById("result").appendChild(document.createElement("br"));
-  
-          if (correctAns.includes(userAns.value)) {
-            score += 100 / questions.length;
+  <div id="quiz" class="quiz-container">
+    <h2>測試題目：</h2>
+    <p id="question"></p>
+    <div id="options"></div>
+  </div>
+
+  <script>
+    let questions = [], userAnser = [], currentQuestionIndex = 0, score = 0, timer = 5400, timerInterval;
+
+    function loadQuestionFile() {
+      const file = document.getElementById("fileInput").files[0];
+      if (!file) return alert("請選擇一個檔案");
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        questions = JSON.parse(e.target.result);
+        resetQuiz();
+        startTimer();
+      };
+      reader.readAsText(file);
+    }
+
+    function loadQuestion() {
+      const quiz = questions[currentQuestionIndex];
+      document.getElementById("question").textContent = (currentQuestionIndex + 1) + ". " + quiz.question;
+      const optionsDiv = document.getElementById("options");
+      optionsDiv.innerHTML = "";
+
+      quiz.options.forEach(option => {
+        const label = document.createElement("label");
+        label.classList.add("option");
+        label.innerHTML = `<input type="radio" name="answer" value="${option.key}" onchange="saveAnswer('${option.key}')"> ${option.key}.${option.value}`;
+        optionsDiv.appendChild(label);
+      });
+      restoreSelection();
+      updateProgress();
+      document.getElementById("questionIndex").textContent = `第 ${currentQuestionIndex + 1} 題`;
+    }
+
+    function saveAnswer(value) {
+      userAnser = GetUserAnser();
+      userAnser = userAnser.filter(x => x.key !== (currentQuestionIndex + 1));
+      userAnser.push({ key: currentQuestionIndex + 1, value: value });
+      localStorage.setItem("USER_ANSER", JSON.stringify(userAnser));
+    }
+
+    function GetUserAnser() {
+      return (localStorage.getItem('USER_ANSER')) ? JSON.parse(localStorage.getItem('USER_ANSER')) : [];
+    }
+
+    function restoreSelection() {
+      userAnser = GetUserAnser();
+      const savedAnswer = userAnser.find(x => x.key === currentQuestionIndex + 1);
+
+      if (savedAnswer) {
+        const radioButtons = document.querySelectorAll('input[name="answer"]');
+        radioButtons.forEach(radio => {
+          if (radio.value === savedAnswer.value) {
+            radio.checked = true;
           }
         });
-  
-        updateScore();
       }
-  
-      function updateScore() {
-        document.getElementById("quiz").style.display = "none";
-        document.getElementById("controlPanel").style.display = "none";
-        document.getElementById("score").textContent = "分數: " + Math.round(score);
-        document.getElementById("score").style.display = "block";
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) currentQuestionIndex--;
+      loadQuestion();
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < questions.length - 1) currentQuestionIndex++;
+      loadQuestion();
+    }
+
+    function jumpToQuestion() {
+      const index = parseInt(document.getElementById("jumpInput").value);
+      if (index >= 1 && index <= questions.length) {
+        currentQuestionIndex = index - 1;
+        loadQuestion();
       }
-  
-      function GetUserAnser() {
-        return (localStorage.getItem('USER_ANSER')) ? JSON.parse(localStorage.getItem('USER_ANSER')) : [];
-      }
-  
-      function SetUserAnser(index, value) {
-        userAnser = GetUserAnser();
-        userAnser = userAnser.filter(x => x.key !== (index + 1));
-        userAnser.push({ key: index + 1, value: value });
-        localStorage.setItem("USER_ANSER", JSON.stringify(userAnser));
-      }
-  
-      function restoreSelection() {
-        userAnser = GetUserAnser();
-        const savedAnswer = userAnser.find(x => x.key === currentQuestionIndex + 1);
-  
-        if (savedAnswer) {
-          const radioButtons = document.querySelectorAll('input[name="answer"]');
-          radioButtons.forEach(radio => {
-            if (radio.value === savedAnswer.value) {
-              radio.checked = true;
-            }
-          });
+    }
+
+    function evaluateResults() {
+      score = 0;
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = "錯誤題目:<br />";
+
+      questions.forEach((q, idx) => {
+        //console.log(q, idx ,userAnser.find(x=>x.key == q.question_number));
+        const userAns = userAnser.find(x=>x.key == q.question_number) ? userAnser.find(x=>x.key == q.question_number).value : 'X';
+        const correctAns = q.answer;
+        if (correctAns.includes(userAns)) {
+          score += 100 / questions.length;
         }
-      }
-    </script>
-  
-  </body>
-  
+        let block = document.createElement("div");
+        block.innerHTML = `<div>${q.question_number}. ${q.question}</div>`;
+        q.options.forEach(option => {
+          const key = option.key;
+          const val = option.value;
+          const text = `${key}.${val}`;
+          const div = document.createElement("div");
+          div.textContent = text;
+          if (correctAns.includes(key)) div.classList.add("green");
+          else if (userAns === key) div.classList.add("red");
+          block.appendChild(div);
+        });
+        resultDiv.appendChild(block);
+        resultDiv.appendChild(document.createElement("br"));
+        
+      });
+      document.getElementById("quiz").style.display = "none";
+      document.getElementById("score").style.display = "block";
+      document.getElementById("score").textContent = "分數: " + score;
+      clearInterval(timerInterval);
+    }
+
+    function resetQuiz() {
+      userAnser = [];
+      currentQuestionIndex = 0;
+      //localStorage.removeItem('USER_ANSER');
+      document.getElementById("score").style.display = "none";
+      document.getElementById("result").innerHTML = "";
+      document.getElementById("quiz").style.display = "block";
+      loadQuestion();
+      startTimer();
+    }
+
+    function cleanQuiz() {
+      userAnser = [];
+      currentQuestionIndex = 0;
+      localStorage.removeItem('USER_ANSER');
+      document.getElementById("score").style.display = "none";
+      document.getElementById("result").innerHTML = "";
+      document.getElementById("quiz").style.display = "block";
+      loadQuestion();
+      startTimer();
+    }
+
+    function showIncorrectOnly() {
+      score = 0;
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = "錯誤題目:<br />";
+
+      questions.forEach((q, idx) => {
+        //console.log(q, idx ,userAnser.find(x=>x.key == q.question_number));
+        const userAns = userAnser.find(x=>x.key == q.question_number) ? userAnser.find(x=>x.key == q.question_number).value : 'X';
+        const correctAns = q.answer;
+        if (correctAns.includes(userAns)) {
+          score += 100 / questions.length;
+        } else {
+          let block = document.createElement("div");
+          block.innerHTML = `<div>${q.question_number}. ${q.question}</div>`;
+          q.options.forEach(option => {
+            const key = option.key;
+            const val = option.value;
+            const text = `${key}.${val}`;
+            const div = document.createElement("div");
+            div.textContent = text;
+            if (correctAns.includes(key)) div.classList.add("green");
+            else if (userAns === key) div.classList.add("red");
+            block.appendChild(div);
+          });
+          resultDiv.appendChild(block);
+          resultDiv.appendChild(document.createElement("br"));
+        }
+      });
+      document.getElementById("quiz").style.display = "none";
+      document.getElementById("score").style.display = "block";
+      document.getElementById("score").textContent = "分數: " + score;
+      clearInterval(timerInterval);
+    }
+
+    function startTimer() {
+      clearInterval(timerInterval);
+      timer = 5400;
+      document.getElementById("timer").textContent = `倒數計時: ${timer} 秒`;
+      timerInterval = setInterval(() => {
+        timer--;
+        document.getElementById("timer").textContent = `倒數計時: ${timer} 秒`;
+        if (timer <= 0) {
+          clearInterval(timerInterval);
+          evaluateResults();
+        }
+      }, 1000);
+    }
+
+    function updateProgress() {
+      const percent = ((currentQuestionIndex + 1) / questions.length) * 100;
+      document.getElementById("progressBarFill").style.width = percent + "%";
+    }
+  </script>
+</body>
+
+</html>
