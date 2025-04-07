@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>隨機題庫下載器</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    pre { background: #f9f9f9; padding: 10px; white-space: pre-wrap; max-height: 400px; overflow: auto; }
+    button { padding: 10px 20px; margin-top: 10px; font-size: 16px; }
+  </style>
+</head>
+<body>
+
+  <h2>上傳題庫 JSON 檔案</h2>
+  <input type="file" id="fileInput" accept=".json">
+  <button onclick="downloadRandomQuestions()">下載隨機 80 題</button>
+
+  <script>
+    let fullQuestionBank = [];
+
+    document.getElementById('fileInput').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        try {
+          const data = JSON.parse(event.target.result);
+          if (!Array.isArray(data)) throw new Error("JSON 格式錯誤：應為題目陣列");
+          fullQuestionBank = data;
+          alert("題庫載入成功，共有 " + data.length + " 題。");
+        } catch (err) {
+          alert("載入錯誤：" + err.message);
+        }
+      };
+      reader.readAsText(file);
+    });
+
+    function downloadRandomQuestions() {
+      if (fullQuestionBank.length === 0) {
+        alert("請先上傳題庫檔案！");
+        return;
+      }
+
+      const shuffled = [...fullQuestionBank].sort(() => Math.random() - 0.5);
+      const selected = shuffled.slice(0, 80);
+
+      const blob = new Blob([JSON.stringify(selected, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'random_80_questions.json';
+      a.click();
+
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>

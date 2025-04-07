@@ -1,0 +1,2002 @@
+[
+  {
+    "question_number": "117",
+    "question": "下列何者為「證券投資信託事業證券投資顧問事業環境、社會及治理(ESG)投資與風險 管理作業流程暨 ESG 資訊揭露實務指引」中，鼓勵證券投資信託事業及證券投資顧問 事業於永續報告書或網站中揭露之內容？ 甲. ESG 投資與風險管理之治理機制運作情 形；乙.辨識、評估、管理及監控 ESG 相關風險之作業程序及管理措施；丙.盡職治理 政策及執行情形",
+    "options": [
+      {
+        "key": "A",
+        "value": "僅甲"
+      },
+      {
+        "key": "B",
+        "value": "僅甲、乙"
+      },
+      {
+        "key": "C",
+        "value": "僅甲、丙"
+      },
+      {
+        "key": "D",
+        "value": "甲、乙、丙"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "340",
+    "question": "G20 財政部長和中央銀行總裁懇請金融穩定委員會(FSB)，檢視金融部門該如何應對氣 候相關議題。FSB 在審查過程中發現滿足充分資訊的需求將帶來諸多好處，下列敘述 何者錯誤？",
+    "options": [
+      {
+        "key": "A",
+        "value": "能夠改善投資人的決策品質，但仍無法協助企業穩定的邁向低碳經濟轉型"
+      },
+      {
+        "key": "B",
+        "value": "良好的資訊能支持投資、貸款和保險承保決策"
+      },
+      {
+        "key": "C",
+        "value": "可改善對氣候相關風險與機會的理解與分析"
+      },
+      {
+        "key": "D",
+        "value": "有助於投資人強化企業策略的韌性與資本支出決策"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "256",
+    "question": "上市上櫃公司永續發展實務守則中，上市上櫃公司之董事會於公司推動永續發展目標， 內容不包含下列哪一項？",
+    "options": [
+      {
+        "key": "A",
+        "value": "鼓勵公司追求最大化短期獲利"
+      },
+      {
+        "key": "B",
+        "value": "考量利害關係人之利益，提出永續發展使命或願景"
+      },
+      {
+        "key": "C",
+        "value": "永續發展納入公司之營運活動與發展方向"
+      },
+      {
+        "key": "D",
+        "value": "永續發展相關資訊揭露之即時性與正確性"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "250",
+    "question": "上市上櫃公司永續發展實務守則中，關於維護社會公益的內容，不包含下列哪一項？",
+    "options": [
+      {
+        "key": "A",
+        "value": "尊重消費者權益"
+      },
+      {
+        "key": "B",
+        "value": "統計溫室氣體排放量"
+      },
+      {
+        "key": "C",
+        "value": "強化供應鏈管理"
+      },
+      {
+        "key": "D",
+        "value": "保障員工合法權益"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "316",
+    "question": "下列哪一個組織主要負責研究與評估由人類活動所造成的氣候變遷現象與問題，並提供 相關的科學評估報告(Assessment Report)？",
+    "options": [
+      {
+        "key": "A",
+        "value": "世界銀行(World Bank)"
+      },
+      {
+        "key": "B",
+        "value": "國際再生能源總署(IRENA)"
+      },
+      {
+        "key": "C",
+        "value": "政府間氣候變遷專門委員會(IPCC)"
+      },
+      {
+        "key": "D",
+        "value": "國際能源總署(IEA)"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "355",
+    "question": "下列哪一項法規／政策規定符合一定標準之上市櫃公司應依 GRI 揭露及編製永續報告 書？",
+    "options": [
+      {
+        "key": "A",
+        "value": "上市櫃公司編製與申報永續報告書作業辦法"
+      },
+      {
+        "key": "B",
+        "value": "公開發行公司年報應行記載事項準則"
+      },
+      {
+        "key": "C",
+        "value": "上市櫃公司永續發展路徑圖"
+      },
+      {
+        "key": "D",
+        "value": "我國接軌之 IFRS 永續揭露準則"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "336",
+    "question": "下列何者不是「保險業氣候相關風險財務揭露指引」要求揭露項目？",
+    "options": [
+      {
+        "key": "A",
+        "value": "氣候相關風險與機會之治理機制"
+      },
+      {
+        "key": "B",
+        "value": "ESG 投資與風險管理之治理機制"
+      },
+      {
+        "key": "C",
+        "value": "氣候相關風險與機會之策略"
+      },
+      {
+        "key": "D",
+        "value": "氣候相關風險之風險管理機制"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "153",
+    "question": "關於發行綠色債券，下列敘述何者正確？",
+    "options": [
+      {
+        "key": "A",
+        "value": "所募集之資金不限其用途"
+      },
+      {
+        "key": "B",
+        "value": "所募集之資金用於綠色投資計畫之放款須達 50%以上"
+      },
+      {
+        "key": "C",
+        "value": "所募集之資金須全部用於綠色投資計畫之放款"
+      },
+      {
+        "key": "D",
+        "value": "綠色投資計畫必須可以降低碳排放量"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "74",
+    "question": "何者最符合綠色授信的概念？",
+    "options": [
+      {
+        "key": "A",
+        "value": "一條關於銀行授信的法規，要求所有借款人皆須符合最低 ESG 標準"
+      },
+      {
+        "key": "B",
+        "value": "一種融資形式，使借款人能將貸款用於環境保護或氣候相關支出"
+      },
+      {
+        "key": "C",
+        "value": "一條國際準則，規範銀行審核綠色企業貸款相對於總貸款金額的比例"
+      },
+      {
+        "key": "D",
+        "value": "一種獎勵機制，符合環保或低碳的企業可以向政府申請貸款利率補助"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "305",
+    "question": "以下有關可持續發展債券之敘述何者為正確的？",
+    "options": [
+      {
+        "key": "A",
+        "value": "可持續發展債券係指債券本息支付條件與發行人可持續發展績效目標(SPT)相連結之 債券"
+      },
+      {
+        "key": "B",
+        "value": "可持續發展債券係指債券所募集之資金擇一用於綠色投資計畫或社會效益投資計畫"
+      },
+      {
+        "key": "C",
+        "value": "可持續發展債券係指債券所募集之資金全部同時用於綠色投資計畫及社會效益投資 計畫"
+      },
+      {
+        "key": "D",
+        "value": "可持續發展債券係指債券所募集之資金全部同時用於公司治理投資計畫"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "306",
+    "question": "下列何種貸款之資金應全部用於環境保護或氣候相關支出？",
+    "options": [
+      {
+        "key": "A",
+        "value": "綠色貸款"
+      },
+      {
+        "key": "B",
+        "value": "社會貸款"
+      },
+      {
+        "key": "C",
+        "value": "永續連結貸款"
+      },
+      {
+        "key": "D",
+        "value": "轉型貸款"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "347",
+    "question": "為增進 ESG 基金商品資訊揭露，集保公司擬於何處建置境外 ESG 基金專區並優化投 信 ESG 基金專區？",
+    "options": [
+      {
+        "key": "A",
+        "value": "公開資訊觀測站"
+      },
+      {
+        "key": "B",
+        "value": "證交所網站"
+      },
+      {
+        "key": "C",
+        "value": "基金觀測站"
+      },
+      {
+        "key": "D",
+        "value": "集保平台"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "20",
+    "question": "有關企業永續報告指令(CSRD)主要規範的適用對象，下列敘述何者不正確？",
+    "options": [
+      {
+        "key": "A",
+        "value": "所有在歐盟的「上市公司」及「大型公司」"
+      },
+      {
+        "key": "B",
+        "value": "亦包含涉及「公眾利益」的公司"
+      },
+      {
+        "key": "C",
+        "value": "外國企業不在監管之列"
+      },
+      {
+        "key": "D",
+        "value": "微型企業除外"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "253",
+    "question": "關於「臺灣 2050 淨零排放路徑」，下列敘述何者有誤？",
+    "options": [
+      {
+        "key": "A",
+        "value": "由行政院國家發展委員會發布"
+      },
+      {
+        "key": "B",
+        "value": "涵蓋四大轉型策略、二大治理基礎"
+      },
+      {
+        "key": "C",
+        "value": "暫未考慮弱勢族群所可能面臨的轉型挑戰與困境"
+      },
+      {
+        "key": "D",
+        "value": "以十二項關鍵戰略整合跨部會資源"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "6",
+    "question": "聯合國環境規劃署(UNEP)，將永續金融劃分為環境、社會、經濟與治理，其中環境面向 不包含下列哪一項？",
+    "options": [
+      {
+        "key": "A",
+        "value": "數位金融"
+      },
+      {
+        "key": "B",
+        "value": "低碳金融"
+      },
+      {
+        "key": "C",
+        "value": "氣候金融"
+      },
+      {
+        "key": "D",
+        "value": "綠色金融"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "259",
+    "question": "哪一項法規/政策規定符合一定標準之上市櫃公司應依 GRI 揭露及編製永續報告書？",
+    "options": [
+      {
+        "key": "A",
+        "value": "上市上櫃公司編製與申報永續報告書作業辦法"
+      },
+      {
+        "key": "B",
+        "value": "公開發行公司年報應行記載事項準則"
+      },
+      {
+        "key": "C",
+        "value": "上市上櫃公司永續發展路徑圖"
+      },
+      {
+        "key": "D",
+        "value": "我國接軌之 IFRS 永續揭露準則"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "11",
+    "question": "歐盟的碳價除受政策干預外，係根據下列何者利用「污染者付費」的做法激勵企業從事 減碳？",
+    "options": [
+      {
+        "key": "A",
+        "value": "碳排放量"
+      },
+      {
+        "key": "B",
+        "value": "碳抵消的排放量"
+      },
+      {
+        "key": "C",
+        "value": "碳洩漏的排放量"
+      },
+      {
+        "key": "D",
+        "value": "碳權憑證的供需"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "292",
+    "question": "金融機構提供以房養老貸款有助於達成哪一項永續目標(或減緩哪一個風險)？",
+    "options": [
+      {
+        "key": "A",
+        "value": "消除貧窮"
+      },
+      {
+        "key": "B",
+        "value": "缺乏居住正義"
+      },
+      {
+        "key": "C",
+        "value": "城鄉差距擴大"
+      },
+      {
+        "key": "D",
+        "value": "超高齡化"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "12",
+    "question": "上市上櫃公司永續發展實務守則中，為健全永續發展之管理，下列哪一項不包含在內？",
+    "options": [
+      {
+        "key": "A",
+        "value": "僅限於環境保護措施"
+      },
+      {
+        "key": "B",
+        "value": "設置推動永續發展之專.（兼）職單位"
+      },
+      {
+        "key": "C",
+        "value": "定期向董事會報告"
+      },
+      {
+        "key": "D",
+        "value": "訂定合理之薪資報酬政策"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "2",
+    "question": "我國推動綠色金融行動方案 3.0，針對資料面向之推動措施內容，下列何者不在其中？",
+    "options": [
+      {
+        "key": "A",
+        "value": "建置企業 ESG 資料平台"
+      },
+      {
+        "key": "B",
+        "value": "推動個別金融業辦理氣候變遷壓力測試"
+      },
+      {
+        "key": "C",
+        "value": "統計因應氣候變遷之承保情形及永續保險商品數據"
+      },
+      {
+        "key": "D",
+        "value": "擴充上市櫃公司 ESG 資訊平台"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "54",
+    "question": "全球暖化趨勢下，臺灣受到淹水影響最顯著的地區位在何處？",
+    "options": [
+      {
+        "key": "A",
+        "value": "西南沿海"
+      },
+      {
+        "key": "B",
+        "value": "北海岸"
+      },
+      {
+        "key": "C",
+        "value": "花東海岸"
+      },
+      {
+        "key": "D",
+        "value": "桃竹苗海岸"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "279",
+    "question": "依確信準則 3000 號執行確信工作之執業人員，在確信工作執行中發現關鍵績效指標之 適用基準之部分或全部不妥適，或標的之部分或全部不適當，需考量以下哪一個做法？",
+    "options": [
+      {
+        "key": "A",
+        "value": "執業人員可直接出具保留結論之確信報告"
+      },
+      {
+        "key": "B",
+        "value": "執業人員可直接出具無法表示結論之確信報告"
+      },
+      {
+        "key": "C",
+        "value": "如法令允許終止委任，則需考量終止委任此確信案件"
+      },
+      {
+        "key": "D",
+        "value": "執業人員僅需視情況出具保留結論、否定結論或無法表示結論之確信報告"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "122",
+    "question": "SASB 準則五大面向當中的商業模式與創新(Business Model and Innovation)，下列何者\n \n是其包含的 ESG 議題？",
+    "options": [
+      {
+        "key": "A",
+        "value": "合理的行銷和廣告(Selling Practices & Product Labeling)"
+      },
+      {
+        "key": "B",
+        "value": "產品設計和生命週期管理(Product Design & Lifecycle Management)"
+      },
+      {
+        "key": "C",
+        "value": "系統風險管理(Systemic Risk Management)"
+      },
+      {
+        "key": "D",
+        "value": "生態衝擊(Ecological Impacts)"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "75",
+    "question": "下列何者為環境汙染責任保險與傳統汙染責任保險的差異？",
+    "options": [
+      {
+        "key": "A",
+        "value": "臺灣未有環境汙染責任保險"
+      },
+      {
+        "key": "B",
+        "value": "承保污染的整治費用"
+      },
+      {
+        "key": "C",
+        "value": "承保突發或意外的汙染"
+      },
+      {
+        "key": "D",
+        "value": "承保第三人體傷或財產的損害"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "106",
+    "question": "「永續報告書作業辦法」規範 14 個產業應揭露具產業重大性且投資人關注之永續相關 指標，企業對應之產業，係依循何種分類標準準則？",
+    "options": [
+      {
+        "key": "A",
+        "value": "企業自行分類"
+      },
+      {
+        "key": "B",
+        "value": "國內上市櫃公司產業類別"
+      },
+      {
+        "key": "C",
+        "value": "美國 SASB 產業分類"
+      },
+      {
+        "key": "D",
+        "value": "全球行業分類標準(GICS)"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "91",
+    "question": "根據上市櫃公司永續發展行動方案，優先推動哪些公司設置永續委員會？",
+    "options": [
+      {
+        "key": "A",
+        "value": "上市公司"
+      },
+      {
+        "key": "B",
+        "value": "上櫃公司"
+      },
+      {
+        "key": "C",
+        "value": "上市櫃公司"
+      },
+      {
+        "key": "D",
+        "value": "興櫃公司"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "348",
+    "question": "企業採用溫室氣體盤查或確信的衡量標準，下列何者敘述錯誤？",
+    "options": [
+      {
+        "key": "A",
+        "value": "GHG Protocol"
+      },
+      {
+        "key": "B",
+        "value": "ISO14064-1"
+      },
+      {
+        "key": "C",
+        "value": "ISAE3410"
+      },
+      {
+        "key": "D",
+        "value": "GRI"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "315",
+    "question": "2019 年 12 月時，歐盟委員會提出下列何項政策，以宣示歐洲將於 2050 年實現氣候 中和，且將此納入具有約束力\n的《歐洲氣候法》(European Climate Law)中？",
+    "options": [
+      {
+        "key": "A",
+        "value": "歐盟永續分類標準(EU Taxonomy)"
+      },
+      {
+        "key": "B",
+        "value": "歐洲綠色政綱(European Green Deal)"
+      },
+      {
+        "key": "C",
+        "value": "碳邊境調整機制(CBAM)"
+      },
+      {
+        "key": "D",
+        "value": "企業永續報告指令(CSRD)"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "100",
+    "question": "有關《氣候變遷綱要公約》(UNFCCC)的敘述，下列何者正確？",
+    "options": [
+      {
+        "key": "A",
+        "value": "該公約對個別締約國規定具體需承擔的義務"
+      },
+      {
+        "key": "B",
+        "value": "該公約具有法律上的約束力"
+      },
+      {
+        "key": "C",
+        "value": "該公約並未規定可在後續從屬的議定書中設定強制碳排放限制"
+      },
+      {
+        "key": "D",
+        "value": "各國與會代表會在各年度的會議中，達成相關的決議內容，成為研究國際氣候變遷 治理機制之重要依據"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "211",
+    "question": "2007~2016 年度最大的土地二氧化碳排放來自何處？",
+    "options": [
+      {
+        "key": "A",
+        "value": "熱帶森林砍伐"
+      },
+      {
+        "key": "B",
+        "value": "種植水稻"
+      },
+      {
+        "key": "C",
+        "value": "畜牧牛羊"
+      },
+      {
+        "key": "D",
+        "value": "泥炭地劣化"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "365",
+    "question": "民眾想要查詢臺中市東勢區地區斷層與土壤液化資料，應該到哪一個單位網站查詢？",
+    "options": [
+      {
+        "key": "A",
+        "value": "農委會"
+      },
+      {
+        "key": "B",
+        "value": "科技部"
+      },
+      {
+        "key": "C",
+        "value": "國家災害防救科技中心"
+      },
+      {
+        "key": "D",
+        "value": "經濟部水利署"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "258",
+    "question": "有關 GRI 準則中與重大議題相關的敘述，下列何者正確？",
+    "options": [
+      {
+        "key": "A",
+        "value": "所有組織皆須決定其重大主題"
+      },
+      {
+        "key": "B",
+        "value": "僅有營收超過特定金額的企業或員工超過一定數量的組織須決定其重大主題"
+      },
+      {
+        "key": "C",
+        "value": "僅有企業須決定其重大主題"
+      },
+      {
+        "key": "D",
+        "value": "僅有高碳排產業須決定其重大主題"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "265",
+    "question": "氣候變遷可能對組織造成財務衝擊，如損害資產或供應鏈中斷等影響，包含颱風、龍捲 風、洪水等極端氣候事件。氣候相關財務揭露工作小組(TCFD)建議中，上面的描述被 歸類在實體風險中的哪一種風險？",
+    "options": [
+      {
+        "key": "A",
+        "value": "立即性風險(Acute Risk)"
+      },
+      {
+        "key": "B",
+        "value": "市場風險(Market Risk)"
+      },
+      {
+        "key": "C",
+        "value": "長期性風險(Chronic Risk)"
+      },
+      {
+        "key": "D",
+        "value": "技術風險(Technology Risk)"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "363",
+    "question": "聯合國「2030 永續發展」的 17 項目標中，下列哪一項與環境風險關聯度較低？",
+    "options": [
+      {
+        "key": "A",
+        "value": "潔淨水資源與衛生"
+      },
+      {
+        "key": "B",
+        "value": "可負擔的潔淨能源"
+      },
+      {
+        "key": "C",
+        "value": "氣候行動"
+      },
+      {
+        "key": "D",
+        "value": "消除貧窮"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "173",
+    "question": "在《京都議定書》中，唯因各締約國之歷史發展與現實情況的不同，故依以下哪一個原 則，要求已開發國家採取先行作為(lead action)進行氣候變遷行動？",
+    "options": [
+      {
+        "key": "A",
+        "value": "完全一致性"
+      },
+      {
+        "key": "B",
+        "value": "共同但有差異"
+      },
+      {
+        "key": "C",
+        "value": "鑑別性"
+      },
+      {
+        "key": "D",
+        "value": "完全差異化"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "280",
+    "question": "最早適用我國 IFRS 永續揭露準則的上市櫃公司，於編製哪一年度的股東會年報須揭 露 IFRS 永續準則的內容？",
+    "options": [
+      {
+        "key": "A",
+        "value": "2025 年"
+      },
+      {
+        "key": "B",
+        "value": "2026 年"
+      },
+      {
+        "key": "C",
+        "value": "2027 年"
+      },
+      {
+        "key": "D",
+        "value": "2028 年"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "356",
+    "question": "關於溫室氣體盤查範疇，下列敘述何者正確？",
+    "options": [
+      {
+        "key": "A",
+        "value": "其他間接溫室氣體排放，可歸類為範疇一：指來自於製程或設施之直接排放"
+      },
+      {
+        "key": "B",
+        "value": "能源間接溫室氣體排放，可歸類為範疇三：指來自於使用電力或蒸汽之能源利用所 產生之間接排放"
+      },
+      {
+        "key": "C",
+        "value": "租賃、委外業務、員工通勤、商務旅行等活動屬於公司的直接溫室氣體排放"
+      },
+      {
+        "key": "D",
+        "value": "來自於製程或設施之直接排放，歸類為直接溫室氣體排放"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "69",
+    "question": "永續投資的主要目標是什麼？",
+    "options": [
+      {
+        "key": "A",
+        "value": "最大限度減少自然和社會資源的消耗"
+      },
+      {
+        "key": "B",
+        "value": "創造最大的經濟價值"
+      },
+      {
+        "key": "C",
+        "value": "高風險高報酬的投資"
+      },
+      {
+        "key": "D",
+        "value": "僅投資慈善相關企業"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "162",
+    "question": "2023 年聯合國氣候變化大會(COP28)，於 2023 年 11 月 30 日至 12 月 12 日在哪一 國舉行？",
+    "options": [
+      {
+        "key": "A",
+        "value": "法國"
+      },
+      {
+        "key": "B",
+        "value": "杜拜"
+      },
+      {
+        "key": "C",
+        "value": "日本"
+      },
+      {
+        "key": "D",
+        "value": "西班牙"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "354",
+    "question": "SASB 準則五大面向當中的領導與治理(Leadership and Governance)，下列何者是其包含 的 ESG 議題？",
+    "options": [
+      {
+        "key": "A",
+        "value": "生態衝擊(Ecological Impacts)"
+      },
+      {
+        "key": "B",
+        "value": "法規和監管環境的管理(Management of the Legal & Regulatory Environment)"
+      },
+      {
+        "key": "C",
+        "value": "勞工關係(Labor Practices)"
+      },
+      {
+        "key": "D",
+        "value": "資訊安全(Data Security)"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "53",
+    "question": "下列何者非金融機構面對治理風險的作為？",
+    "options": [
+      {
+        "key": "A",
+        "value": "與大學產學合作"
+      },
+      {
+        "key": "B",
+        "value": "董事會成員多元化"
+      },
+      {
+        "key": "C",
+        "value": "誠信經營"
+      },
+      {
+        "key": "D",
+        "value": "成立薪酬委員會"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "141",
+    "question": "以下何者非國內公司治理評鑑的推動目的？",
+    "options": [
+      {
+        "key": "A",
+        "value": "樹立企業學習的榜樣，發揮典範作用"
+      },
+      {
+        "key": "B",
+        "value": "引導企業建立良好公司治理制度與文化"
+      },
+      {
+        "key": "C",
+        "value": "透過弱化董事會以維護其他利害關係人的權益"
+      },
+      {
+        "key": "D",
+        "value": "讓投資者能夠更全面地評估和選擇投資對象"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "33",
+    "question": "「永續報告書作業辦法」規範企業未納入盤查計算之營運據點或子公司占總排放量之比重 上限為 5%\n的原因？",
+    "options": [
+      {
+        "key": "A",
+        "value": "可靠性"
+      },
+      {
+        "key": "B",
+        "value": "可比性"
+      },
+      {
+        "key": "C",
+        "value": "一致性"
+      },
+      {
+        "key": "D",
+        "value": "完整性"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "139",
+    "question": "以下何種 ESG 投資方法是藉由股東權力來影響企業行為，例如委由循 ESG 指導原則 的股務代理機構行使投票權？",
+    "options": [
+      {
+        "key": "A",
+        "value": "永續相關主題投資"
+      },
+      {
+        "key": "B",
+        "value": "影響力與社區投資"
+      },
+      {
+        "key": "C",
+        "value": "企業參與及股東行動"
+      },
+      {
+        "key": "D",
+        "value": "整合 ESG 因子"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "290",
+    "question": "金融機構大股東干政是哪一種永續風險？",
+    "options": [
+      {
+        "key": "A",
+        "value": "文化風險"
+      },
+      {
+        "key": "B",
+        "value": "環境風險"
+      },
+      {
+        "key": "C",
+        "value": "社會風險"
+      },
+      {
+        "key": "D",
+        "value": "治理風險"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "457",
+    "question": "決定重大主題的流程中，下列哪個步驟與組織持續鑑別和評估影響力相關？",
+    "options": [
+      {
+        "key": "A",
+        "value": "步驟 1：了解組織脈絡"
+      },
+      {
+        "key": "B",
+        "value": "步驟 2：鑑別實際及潛在影響力"
+      },
+      {
+        "key": "C",
+        "value": "步驟 3：評估影響力的顯著程度"
+      },
+      {
+        "key": "D",
+        "value": "步驟 4：排定最顯著影響力的優先報導順序"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "424",
+    "question": "根據影響力管理規範，'WHO' 維度將利害關係人進行分群的目的是什麼？",
+    "options": [
+      {
+        "key": "A",
+        "value": "最大化財務表現"
+      },
+      {
+        "key": "B",
+        "value": "分配影響力資料類別"
+      },
+      {
+        "key": "C",
+        "value": "理解地理邊界"
+      },
+      {
+        "key": "D",
+        "value": "將資源分配給最大受益者"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "438",
+    "question": "為什麼企業和投資者需要將影響力風險與財務風險區分開來考慮？",
+    "options": [
+      {
+        "key": "A",
+        "value": "資源分配策略不同"
+      },
+      {
+        "key": "B",
+        "value": "影響力風險是獨立於財務風險的"
+      },
+      {
+        "key": "C",
+        "value": "影響力風險的評估方法不同於財務風險"
+      },
+      {
+        "key": "D",
+        "value": "評估成果的重要性不同"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "214",
+    "question": "根據世界經濟論壇《2023 全球風險報告》，未來 10 年內影響全球的最大風險為何？",
+    "options": [
+      {
+        "key": "A",
+        "value": "自然災害與極端天氣事件"
+      },
+      {
+        "key": "B",
+        "value": "氣候變遷調適失敗"
+      },
+      {
+        "key": "C",
+        "value": "生活成本負擔困境"
+      },
+      {
+        "key": "D",
+        "value": "減緩氣候變遷失敗"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "247",
+    "question": "以下哪一個會議達成歷史性協議，發達國家將向較貧窮國家支付費用，補償氣候變化造 成的經濟損失？",
+    "options": [
+      {
+        "key": "A",
+        "value": "第二十五屆聯合國氣候變遷締約國大會(COP 25)"
+      },
+      {
+        "key": "B",
+        "value": "第二十六屆聯合國氣候變遷締約國大會(COP 26)"
+      },
+      {
+        "key": "C",
+        "value": "第二十七屆聯合國氣候變遷締約國大會(COP 27)"
+      },
+      {
+        "key": "D",
+        "value": "第二十八屆聯合國氣候變遷締約國大會(COP 28)\n\n\n（A） 請問哪一個協議首次將「逐步減少(phase down) 對煤炭和化石燃料補助」寫入官方檔案 中？\n(A)格拉斯哥氣候協議(Glasgow Climate Pact) (B)京都議定書(Kyoto Protocol) (C)巴黎協定(Paris Agreement)\n(D)利馬氣候行動呼籲(Lima Call for Climate Action)"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "269",
+    "question": "下列何者為「本國銀行氣候風險財務揭露指引」要求銀行訂定高氣候風險客戶與高氣候 風險資產之管理措施時，應考慮之相同因素？",
+    "options": [
+      {
+        "key": "A",
+        "value": "客戶改善自身氣候風險之意願與能力"
+      },
+      {
+        "key": "B",
+        "value": "銀行對該資產之管理能力"
+      },
+      {
+        "key": "C",
+        "value": "是否有抵減銀行曝險之替代做法"
+      },
+      {
+        "key": "D",
+        "value": "選項(A)(B)(C)皆非"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "70",
+    "question": "永續連結貸款(SLL)需訂立永續發展績效目標(SPT)和關鍵績效指標(KPI)，下列何者非永 續發展績效目標和關鍵績效指標？",
+    "options": [
+      {
+        "key": "A",
+        "value": "生物多樣性"
+      },
+      {
+        "key": "B",
+        "value": "污染程度"
+      },
+      {
+        "key": "C",
+        "value": "溫室氣體排放量"
+      },
+      {
+        "key": "D",
+        "value": "再生能源安裝量"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "474",
+    "question": "以下何者並非 SASB 理性投資者興趣的證據評估之因素",
+    "options": [
+      {
+        "key": "A",
+        "value": "利害關係人的關注"
+      },
+      {
+        "key": "B",
+        "value": "資本成本/風險概況"
+      },
+      {
+        "key": "C",
+        "value": "創新機會"
+      },
+      {
+        "key": "D",
+        "value": "產業規範和競爭驅動因素"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "263",
+    "question": "在臺灣，會計師依據以下哪一號準則規範，進行溫室氣體聲明之確信工作？",
+    "options": [
+      {
+        "key": "A",
+        "value": "審計準則 220 號「查核歷史性財務資訊之品質管制」"
+      },
+      {
+        "key": "B",
+        "value": "確信準則 3000 號「非屬歷史性財務資訊查核或核閱之確信案件」"
+      },
+      {
+        "key": "C",
+        "value": "確信準則 3410 號「溫室氣體聲明之確信案件」"
+      },
+      {
+        "key": "D",
+        "value": "審計準則 720 號「其他資訊之閱讀與考量」"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "24",
+    "question": "歐洲財務報導諮詢小組(EFRAG)在哪個報告中提出 54 項提案，做為歐盟執行委員會要 求 EFRAG 研擬修訂版 NFRD 中可能的非財務報導準則？",
+    "options": [
+      {
+        "key": "A",
+        "value": "歐洲永續發展報告準則(ESRS)"
+      },
+      {
+        "key": "B",
+        "value": "歐盟永續分類標準(EU Taxonomy)"
+      },
+      {
+        "key": "C",
+        "value": "監管技術標準(RTS)"
+      },
+      {
+        "key": "D",
+        "value": "發展一套完整的歐盟永續報導準則之路徑圖"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "333",
+    "question": "臺灣 2050 淨零排放路徑其中生活轉型的內容，不包含下列哪一項？",
+    "options": [
+      {
+        "key": "A",
+        "value": "提高轉型社會之韌性"
+      },
+      {
+        "key": "B",
+        "value": "推動新舊建物為淨零循環建築"
+      },
+      {
+        "key": "C",
+        "value": "培養零浪費低碳飲食習慣"
+      },
+      {
+        "key": "D",
+        "value": "「使用」取代「擁有」的生活方式"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "88",
+    "question": "歐盟於 2020 年 6 月發布下列哪個標準，並在同年 7 月 12 日生效，界定「永續的經 濟活動」，成為多數國家制定相關標準或指引的參考？",
+    "options": [
+      {
+        "key": "A",
+        "value": "歐盟永續分類標準(EU Taxonomy)"
+      },
+      {
+        "key": "B",
+        "value": "歐洲綠色政綱(European Green Deal)"
+      },
+      {
+        "key": "C",
+        "value": "碳邊境調整機制(CBAM)"
+      },
+      {
+        "key": "D",
+        "value": "企業永續報告指令(CSRD)"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "167",
+    "question": "利害關係人理論強調企業應該追求以下哪種類型的價值創造？",
+    "options": [
+      {
+        "key": "A",
+        "value": "僅追求員工和管理層的利益"
+      },
+      {
+        "key": "B",
+        "value": "長期價值的創造，綜合考慮所有利害關係人的需求"
+      },
+      {
+        "key": "C",
+        "value": "短期利益的最大化"
+      },
+      {
+        "key": "D",
+        "value": "追求股東的經濟利益"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "124",
+    "question": "根據「本國銀行氣候風險財務揭露指引」，以下敘述何者錯誤？",
+    "options": [
+      {
+        "key": "A",
+        "value": "董事會及高階管理階層應將氣候風險因素納入銀行風險胃納、策略及經營計畫中， 包括辨識及評估氣候相關之風險與機會，以及其對銀行策略與計畫之影響"
+      },
+      {
+        "key": "B",
+        "value": "董事會應核定氣候風險管理政策，並據以指導、監督及管理銀行對氣候風險之暴險 情形，確保銀行訂定之定性及定量措施符合其風險胃納"
+      },
+      {
+        "key": "C",
+        "value": "高階管理階層應訂定氣候風險管理之政策、管理制度及監控指標，定期檢視其有效 性與執行情形"
+      },
+      {
+        "key": "D",
+        "value": "銀行應不定期向董事會報告氣候風險之相關資訊，以利董事會及高階管理階層於制 定策略規劃及監控業務時納入考量"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "325",
+    "question": "有些企業因成本考量，不試圖從營運流程中減少碳排，而是將碳排放量從 A 國移到 B 國，或是從不積極從事減碳的地區進口替代品，如此會對全球的碳排放量(carbon emission)產生何種影響？",
+    "options": [
+      {
+        "key": "A",
+        "value": "會大幅減少全球的碳排放量"
+      },
+      {
+        "key": "B",
+        "value": "對全球的碳排放量完全沒有影響"
+      },
+      {
+        "key": "C",
+        "value": "不會減少全球的碳排放量"
+      },
+      {
+        "key": "D",
+        "value": "對全球在 2050 年達成淨零碳排的目標完全沒有影響"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "477",
+    "question": "在評估永續議題時，SASB 考慮了哪個兩部分測試？",
+    "options": [
+      {
+        "key": "A",
+        "value": "已知趨勢和不確定性"
+      },
+      {
+        "key": "B",
+        "value": "市場需求和財務表現"
+      },
+      {
+        "key": "C",
+        "value": "MD&A 揭露要求"
+      },
+      {
+        "key": "D",
+        "value": "重大性測試和持股者分析"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "320",
+    "question": "永續發展目標指南的五大流程考慮旨在確保什麼？",
+    "options": [
+      {
+        "key": "A",
+        "value": "提高員工的工作效率"
+      },
+      {
+        "key": "B",
+        "value": "實現 SDGs 的最佳效果，促進綜合性、整體性和可持續性"
+      },
+      {
+        "key": "C",
+        "value": "縮短企業的獲利時間"
+      },
+      {
+        "key": "D",
+        "value": "組織遵守法律法規"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "335",
+    "question": "IFRS S2 氣候相關揭露要求(Climate-related Disclosures)，除依 TCFD 一般揭露的要求 外，須整體考量價值鏈中氣候相關的風險與機會，並揭露下列資訊，何者敘述錯誤？",
+    "options": [
+      {
+        "key": "A",
+        "value": "內部碳定價之機制與流程"
+      },
+      {
+        "key": "B",
+        "value": "高階管理人員的性別比例與薪酬的平等"
+      },
+      {
+        "key": "C",
+        "value": "因應氣候相關風險和機會而產生之資本支出及投／融資金額"
+      },
+      {
+        "key": "D",
+        "value": "受氣候相關轉型／實體風險及機會影響之資產或業務金額及比例"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "179",
+    "question": "現階段造成氣候變遷問題，主因是下列何者？",
+    "options": [
+      {
+        "key": "A",
+        "value": "過度捕撈海洋生物"
+      },
+      {
+        "key": "B",
+        "value": "地球自然的氣候循環"
+      },
+      {
+        "key": "C",
+        "value": "人類為了發展經濟過度排碳所累積造成"
+      },
+      {
+        "key": "D",
+        "value": "以上皆非"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "184",
+    "question": "確信準則 3000 號中所指之 Assurance Engagement 係為：",
+    "options": [
+      {
+        "key": "A",
+        "value": "認證案件"
+      },
+      {
+        "key": "B",
+        "value": "確信案件"
+      },
+      {
+        "key": "C",
+        "value": "直接案件"
+      },
+      {
+        "key": "D",
+        "value": "適當方"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "419",
+    "question": "根據影響力管理規範，企業如何評估成果是否「足夠好」？",
+    "options": [
+      {
+        "key": "A",
+        "value": "通過與門檻值進行比較"
+      },
+      {
+        "key": "B",
+        "value": "通過衡量財務表現"
+      },
+      {
+        "key": "C",
+        "value": "通過尋求利害關係人的反饋"
+      },
+      {
+        "key": "D",
+        "value": "通過考慮對環境的影響"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "400",
+    "question": "將負責任的商業實踐和影響管理整合到組織體系和決策中，對企業有何好處？",
+    "options": [
+      {
+        "key": "A",
+        "value": "減少負面影響，增強永續發展績效"
+      },
+      {
+        "key": "B",
+        "value": "確保符合行業法規和標準"
+      },
+      {
+        "key": "C",
+        "value": "最大化財務盈利和市場佔有率"
+      },
+      {
+        "key": "D",
+        "value": "減少利害關係人的參與和影響"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "334",
+    "question": "聯合國永續發展目標 SDGs，其中之一旨在強化永續發展執行方法、重振永續發展全球 夥伴關係，下列哪一個不屬於此目標？",
+    "options": [
+      {
+        "key": "A",
+        "value": "促進開發中國家之間的合作"
+      },
+      {
+        "key": "B",
+        "value": "提高對開發中國家的資金與技術援助"
+      },
+      {
+        "key": "C",
+        "value": "提供合宜、可負擔的住房"
+      },
+      {
+        "key": "D",
+        "value": "加強科技創新與數位應用"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "342",
+    "question": "「公司通過產品設計、製造和報廢管理來管理這些風險的能力，例如使用回收和可再生 材料」屬於 SASB 準則當中哪一項 ESG 議題的描述？",
+    "options": [
+      {
+        "key": "A",
+        "value": "商業道德(Business Ethics)"
+      },
+      {
+        "key": "B",
+        "value": "原料採購(Materials Sourcing & Efficiency)"
+      },
+      {
+        "key": "C",
+        "value": "產品品質與安全(Product Quality & Safety)"
+      },
+      {
+        "key": "D",
+        "value": "合理的行銷和廣告(Selling Practices & Product Labeling)"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "386",
+    "question": "下列何者非綠色債券中之綠色投資計畫？",
+    "options": [
+      {
+        "key": "A",
+        "value": "溫室氣體減量"
+      },
+      {
+        "key": "B",
+        "value": "化石燃料發電"
+      },
+      {
+        "key": "C",
+        "value": "能源使用效率提昇及能源節約"
+      },
+      {
+        "key": "D",
+        "value": "農林資源保育"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "109",
+    "question": "氣候相關財務揭露工作小組(TCFD)對於四項核心要素當中的策略，哪一個描述正確？",
+    "options": [
+      {
+        "key": "A",
+        "value": "是指組織如何鑑別、評估和管理氣候相關風險"
+      },
+      {
+        "key": "B",
+        "value": "是指組織業務、策略和財務規劃，揭露實際及潛在與氣候相關的衝擊"
+      },
+      {
+        "key": "C",
+        "value": "是指組織與氣候相關風險與機會的治理情況"
+      },
+      {
+        "key": "D",
+        "value": "是指針對重大性的資訊，揭露用於評估和管理氣候相關議題的指標和目標"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "94",
+    "question": "有關企業永續報告指令(CSRD)與取代非財務報告指令(NFRD)所增加的內容，下列敘述 何者正確？",
+    "options": [
+      {
+        "key": "A",
+        "value": "NFRD 強調企業必須基於雙重重大性(Double Materiality)原則作為永續資訊揭露的基 礎"
+      },
+      {
+        "key": "B",
+        "value": "ESRS 引入根據 CSRD 更詳細的報告要求"
+      },
+      {
+        "key": "C",
+        "value": "CSRD 規定企業無需揭露反腐敗和賄賂相關資訊"
+      },
+      {
+        "key": "D",
+        "value": "CSRD 強調企業必須需揭露「影響重大性(Impact Materiality)」和「財務重大性 (Financial Materiality)」兩方面之資訊"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "161",
+    "question": "《氣候變遷綱要公約》(UNFCCC)附件一締約國應制定下列哪一項政策？",
+    "options": [
+      {
+        "key": "A",
+        "value": "應承擔為開發中國家提供資金與技術援助等責任"
+      },
+      {
+        "key": "B",
+        "value": "制定全球暖化政策"
+      },
+      {
+        "key": "C",
+        "value": "承諾國家自主貢獻(NDCs)"
+      },
+      {
+        "key": "D",
+        "value": "應制定國家政策和採取相應的措施來減緩氣候變化"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "242",
+    "question": "聯合國政府間氣候變遷專門委員會(Intergovernmental Panel on Climate Change, IPCC)隸 屬於哪一個組織？",
+    "options": [
+      {
+        "key": "A",
+        "value": "世界銀行(World Bank)"
+      },
+      {
+        "key": "B",
+        "value": "聯合國(United Nation)"
+      },
+      {
+        "key": "C",
+        "value": "國際再生能源總署(IRENA)"
+      },
+      {
+        "key": "D",
+        "value": "國際能源總署(IEA)"
+      }
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "question_number": "92",
+    "question": "國家自主貢獻(NDCs)起緣於哪個協定要求各國應提出在 2020 年以後的氣候行動目標？",
+    "options": [
+      {
+        "key": "A",
+        "value": "京都議定書(Kyoto Protocol)"
+      },
+      {
+        "key": "B",
+        "value": "格拉斯哥氣候協議(Glasgow Climate Pact)"
+      },
+      {
+        "key": "C",
+        "value": "哥本哈根協定(Copenhagen Accord)"
+      },
+      {
+        "key": "D",
+        "value": "巴黎協定(Paris Agreement)"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "187",
+    "question": "上市上櫃公司子公司之綜合證券商應於哪個年度完成溫室氣體盤查？",
+    "options": [
+      {
+        "key": "A",
+        "value": "112 年"
+      },
+      {
+        "key": "B",
+        "value": "113 年"
+      },
+      {
+        "key": "C",
+        "value": "114 年"
+      },
+      {
+        "key": "D",
+        "value": "與上市上櫃母公司之時程一致"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "question_number": "268",
+    "question": "資本額 100 億元以上及鋼鐵、水泥業公司，規定哪一年揭露合併報表子公司的溫室氣 體盤查資訊？",
+    "options": [
+      {
+        "key": "A",
+        "value": "114 年"
+      },
+      {
+        "key": "B",
+        "value": "115 年"
+      },
+      {
+        "key": "C",
+        "value": "116 年"
+      },
+      {
+        "key": "D",
+        "value": "117 年"
+      }
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_number": "80",
+    "question": "若投資決策對於永續造成「主要不利衝擊」(PAIs)須加以揭露；這是屬於下列哪方面的資 訊揭露？",
+    "options": [
+      {
+        "key": "A",
+        "value": "永續性風險政策"
+      },
+      {
+        "key": "B",
+        "value": "產品的獲利性揭露"
+      },
+      {
+        "key": "C",
+        "value": "不利的永續性影響"
+      },
+      {
+        "key": "D",
+        "value": "產品級別揭露"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "329",
+    "question": "受《企業永續報告指令》(CSRD)規範的企業將依據歐盟轄屬機構「歐洲財務報導諮詢 小組」(EFRAG)於 2022 年 4 月發布的哪一項規範予以揭露？",
+    "options": [
+      {
+        "key": "A",
+        "value": "監管技術標準(RTS)"
+      },
+      {
+        "key": "B",
+        "value": "歐盟永續分類標準(EU Taxonomy)"
+      },
+      {
+        "key": "C",
+        "value": "歐洲永續發展報告準則(ESRS)草案"
+      },
+      {
+        "key": "D",
+        "value": "發展一套完整的歐盟永續報導準則之路徑圖"
+      }
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_number": "45",
+    "question": "「編製與申報永續報告書作業辦法」規定揭露哪一個單位監督及治理氣候相關資訊？",
+    "options": [
+      {
+        "key": "A",
+        "value": "每一個員工"
+      },
+      {
+        "key": "B",
+        "value": "永續委員會/ESG 委員會"
+      },
+      {
+        "key": "C",
+        "value": "永續委員會/ESG 委員會轄下之各小組領導"
+      },
+      {
+        "key": "D",
+        "value": "董事會與管理階層"
+      }
+    ],
+    "answer": [
+      "D"
+    ]
+  }
+]
