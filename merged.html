@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON 合併工具</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        input {
+            margin: 10px;
+        }
+
+        #mergeButton {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        pre {
+            text-align: left;
+            background-color: #f4f4f4;
+            padding: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JSON 合併工具</h2>
+
+    <div>
+        <label>上傳題目檔 (questions.json): </label>
+        <input type="file" id="questionFile">
+    </div>
+    <div>
+        <label>上傳答案檔 (ans.json): </label>
+        <input type="file" id="answerFile">
+    </div>
+    <button id="mergeButton">合併並下載</button>
+
+    <pre id="output"></pre>
+
+    <script>
+        let questions = [];
+        let answers = [];
+
+        // 讀取檔案為 JSON
+        function readJsonFile(fileInput, callback) {
+            const file = fileInput.files[0];
+            if (!file) {
+                alert("請選擇檔案");
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function (event) {
+                try {
+                    const json = JSON.parse(event.target.result);
+                    callback(json);
+                } catch (error) {
+                    alert("無法解析 JSON 檔案");
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // 點擊合併按鈕
+        document.getElementById("mergeButton").addEventListener("click", () => {
+            const qInput = document.getElementById("questionFile");
+            const aInput = document.getElementById("answerFile");
+
+            // 先讀取 questions.json
+            readJsonFile(qInput, (qData) => {
+                questions = qData;
+
+                // 再讀取 answers.json
+                readJsonFile(aInput, (aData) => {
+                    answers = aData;
+
+                    // 合併答案到題目中
+                    const merged = questions.map(q => {
+                        const ans = answers.find(a => String(a.key) === q.question_number);
+                        return {
+                            ...q,
+                            answer: ans ? ans.value : []
+                        };
+                    });
+
+                    // 顯示在畫面
+                    document.getElementById("output").textContent = JSON.stringify(merged, null, 2);
+
+                    // 自動下載合併後的 JSON
+                    const blob = new Blob([JSON.stringify(merged, null, 2)], { type: "application/json" });
+                    const link = document.createElement("a");
+                    link.href = URL.createObjectURL(blob);
+                    link.download = "merged.json";
+                    link.click();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

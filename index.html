@@ -50,30 +50,32 @@
 <body>
     <div>
         <input type="file" id="fileInput">
-        <button onclick="loadFile()">讀取檔案</button>
+        <button onclick="loadQuestionFile()">讀取檔案</button>
     </div>
     <div>
         <input type="file" id="fileAnsInput">
-        <button onclick="loadAnsFile()">讀取解答</button>
+        <button onclick="loadAnswerFile()">讀取解答</button>
     </div>
+    <p class="score" id="score" style="display: none;">分數: 0</p>
     <p class="result" id="result"></p>
-    <p class="score" id="score">分數: 0</p>
 
-    <div class="quiz-container">
+
+    <div id="quiz" class="quiz-container">
         <h2>測試題目：</h2>
         <p id="question"></p>
         <div id="options"></div>
+        <button onclick="submitAnswer()">提交答案</button>
     </div>
-    <button onclick="checkAnswer()">提交答案</button>
+
     <script>
 
         let questions = [];
         let userAnser = [];
-        let testAnser = [];
+        let correctAnswers = [];
         let currentQuestionIndex = 0;
         let score = 0;
 
-        function loadFile() {
+        function loadQuestionFile() {
             const fileInput = document.getElementById("fileInput");
             const file = fileInput.files[0];
             if (!file) {
@@ -83,9 +85,7 @@
 
             const reader = new FileReader();
             reader.onload = function (event) {
-                const text = event.target.result;
-                questions = JSON.parse(text);
-
+                questions = JSON.parse(event.target.result);
                 loadQuestion();
             };
             reader.readAsText(file);
@@ -93,7 +93,7 @@
 
         }
 
-        function loadAnsFile() {
+        function loadAnswerFile() {
             const fileInput = document.getElementById("fileAnsInput");
             const file = fileInput.files[0];
             if (!file) {
@@ -104,9 +104,9 @@
             const reader = new FileReader();
             reader.onload = function (event) {
                 const text = event.target.result;
-                testAnser = JSON.parse(text);
+                correctAnswers = JSON.parse(text);
 
-                checkAnswerResult();
+                evaluateResults();
             };
             reader.readAsText(file);
 
@@ -142,10 +142,9 @@
             restoreSelection();
         }
 
-        function checkAnswer() {
+        function submitAnswer() {
             if (questions.length === 0) return;
 
-            //const correctAnswer = questions[currentQuestionIndex].answer;
             const selected = document.querySelector('input[name="answer"]:checked');
             if (!selected) {
                 document.getElementById("result").textContent = "請選擇一個答案！";
@@ -153,34 +152,27 @@
             }
             SetUserAnser(currentQuestionIndex, selected.value);
 
-            /*
-            if (selected.value === correctAnswer) {
-                document.getElementById("result").textContent = "正確！";
-                score++;
-            }
-            else {
-                document.getElementById("result").textContent = "錯誤，請再試一次！";
-            }
-
-            localStorage.setItem("score", score);
-            updateScore();
-            */
             currentQuestionIndex++;
             loadQuestion()
         }
-
-        function checkAnswerResult() {
+        // 顯示成績與錯誤題目
+        function evaluateResults() {
             score = 0;
             userAnser = GetUserAnser();
             document.getElementById("result").innerHTML = "錯誤題目:<br />";
-            userAnser.forEach(anser => {
-                let testNum = anser.key;
+            userAnser.forEach(userAns => {
+                //題號
+                let testNum = userAns.key;
 
-                let realAns = testAnser.filter(x => x.key == testNum)[0];
+                //正確解答
+                let correctAns = correctAnswers.filter(x => x.key == testNum)[0];
+
+                //題目
                 const quiz = questions.filter(x => x.question_number == testNum)[0];
+                
 
-                if (realAns.value == anser.value) {
-                    score += (100 / (testAnser.length));
+                if (correctAns.value.filter(x=> x == userAns.value ).length > 0 ) {
+                    score += (100 / (correctAnswers.length));
                 }
                 let resultDiv = document.getElementById("result");
                 let title = document.createElement("div");
@@ -190,12 +182,12 @@
 
                 quiz.options.forEach(option => {
                     let label = document.createElement("div");
-
-                    if (option.key == realAns.value) {
+                    console.log(correctAns.value,option.value);
+                    if (correctAns.value.filter(x=> x == option.key ).length > 0) {
                         label.innerHTML = `<div>O ${option.key}.${option.value} </div>`;
                         label.classList.add("green");
                     }
-                    else if (option.key == anser.value) {
+                    else if (option.key == userAns.value) {
                         label.innerHTML = `<div>X ${option.key}.${option.value} </div>`;
                         label.classList.add("red");
                     } else {
@@ -242,7 +234,9 @@
         }
 
         function updateScore() {
+            document.getElementById("quiz").style.display = "none";
             document.getElementById("score").textContent = "分數: " + score;
+            document.getElementById("score").style.display = "block";
         }
 
         //loadQuestions();
