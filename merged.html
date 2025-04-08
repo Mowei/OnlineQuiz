@@ -88,7 +88,7 @@
                         const ans = answers.find(a => String(a.key) === q.question_number);
                         return {
                             ...q,
-                            answer: ans ? ans.value : []
+                            answer: ans ? ans.value.toString() : []
                         };
                     });
 
