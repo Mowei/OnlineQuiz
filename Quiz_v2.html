@@ -83,6 +83,7 @@
     <p class="score" id="score" style="display: none;">分數: 0</p>
     <button onclick="cleanQuiz()">重新作答</button>
     <button onclick="showIncorrectOnly()">只看錯題</button>
+    <button onclick="SaveIncorrectOnly()">錯題匯出</button>
     <button onclick="evaluateResults()">批改分數</button>
     <div class="result" id="result"></p>
   </div>
@@ -256,6 +257,23 @@
       document.getElementById("score").style.display = "block";
       document.getElementById("score").textContent = "分數: " + score;
       clearInterval(timerInterval);
+    }
+    function SaveIncorrectOnly(){
+      let saveArrary = [];
+      questions.forEach((q, idx) => {
+        const userAns = userAnser.find(x=>x.key == q.question_number) ? userAnser.find(x=>x.key == q.question_number).value : 'X';
+        const correctAns = q.answer;
+        if (!correctAns.includes(userAns)) {
+          saveArrary.push(q);
+        } 
+      });
+
+        // 自動下載合併後的 JSON
+        const blob = new Blob([JSON.stringify(saveArrary, null, 2)], { type: "application/json" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "Incorrect.json";
+        link.click();
     }
 
     function startTimer() {
