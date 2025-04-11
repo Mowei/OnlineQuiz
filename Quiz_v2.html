@@ -203,7 +203,7 @@
 		if(q.note){
 			let note = document.createElement("div");
 			note.classList.add("note");
-			note.innerHTML = `<div>${q.note}</div>`;
+			note.innerHTML = `<div>${q.note.replaceAll('。','。<br>')}</div>`;
 			resultDiv.appendChild(note);
 		}
         resultDiv.appendChild(document.createElement("br"));
@@ -263,6 +263,15 @@
           });
           resultDiv.appendChild(block);
           resultDiv.appendChild(document.createElement("br"));
+		  
+		  if(q.note){
+			  let note = document.createElement("div");
+			  note.classList.add("note");
+			  note.innerHTML = `<div>${q.note.replaceAll('。','。<br>').replaceAll('·','<br>·')}</div>`;
+			  resultDiv.appendChild(note);
+		  }
+          resultDiv.appendChild(document.createElement("br"));
+		  
         }
       });
       document.getElementById("quiz").style.display = "none";
